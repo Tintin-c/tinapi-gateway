@@ -1,0 +1,16 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: host_route
+          uri: http://localhost:8080
+          predicates:
+            - Path=/name/**
+
+      httpserver:
+        wiretap: true
+      httpclient:
+        wiretap: true
