@@ -14,3 +14,12 @@ spring:
         wiretap: true
       httpclient:
         wiretap: true
+dubbo:
+  application:
+    name: dubbo-springboot-demo-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address: nacos://8.134.133.xxx:8848
